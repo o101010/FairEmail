@@ -12,8 +12,30 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+
+    @media (prefers-color-scheme: light){
+      body{
+        color: #212121;
+        background: #FFFFFF;
+      }
+      a:link{color: #C68400;}
+      a:visited{color: #ff6f00;}
+      a:hover{color: #039BE5;}
+      a:active{color: #039BE5;}
+    }
+
+    @media (prefers-color-scheme: dark){
+      body{
+        color: #FFFFFF;
+        background: #424242;
+      }
+      a:link{color: #FFB300;}
+      a:visited{color: #FF6F00;}
+      a:hover{color: #01579B;}
+      a:active{color: #01579B;}
+    }
   </style>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/M66B/FairEmail/master/app/src/main/ic_launcher-web.png">
+  <link rel="shortcut icon" href="app/src/main/ic_launcher-web.png">
   <style>
     body { font-family: Arial, sans-serif; }
   </style>
@@ -30,7 +52,7 @@
 <p>There is a lot of technical information in this FAQ, mostly for specific problems or specific use cases. For other more common questions, please see the tutorials below or contact me via <em>Get support</em> below.</p>
 <p><br></p>
 <h2 id="tutorials">Tutorials</h2>
-<p>Please <a href="https://github.com/M66B/FairEmail/tree/master/tutorials">see here</a> for tutorials 📖.</p>
+<p>Please <a href="tutorials">see here</a> for tutorials 📖.</p>
 <h2 id="index">Index</h2>
 <ul>
 <li><a href="#authorizing-accounts">Authorizing accounts</a></li>
@@ -1027,11 +1049,11 @@ Visit https://aka.ms/smtp_auth_disabled for more information.</code></pre>
 <p><a name="faq27"></a> <strong>(27) How can I distinguish between embedded and external images?</strong></p>
 <p>🌎 <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq27">Google Translate</a></p>
 <p>External image:</p>
-<p><img alt="External image" src="https://github.com/M66B/FairEmail/blob/master/images/baseline_image_black_48dp.png" width="48" height="48" /></p>
+<p><picture><source srcset="images/baseline_image_white_48dp.png" media="(prefers-color-scheme: dark)"><img alt="External image" src="images/baseline_image_black_48dp.png" width="48" height="48" /></picture></p>
 <p>Embedded image:</p>
-<p><img alt="Embedded image" src="https://github.com/M66B/FairEmail/blob/master/images/baseline_photo_library_black_48dp.png" width="48" height="48" /></p>
+<p><picture><source srcset="images/baseline_photo_library_white_48dp.png" media="(prefers-color-scheme: dark)"><img alt="Embedded image" src="images/baseline_photo_library_black_48dp.png" width="48" height="48" /></picture></p>
 <p>Broken image:</p>
-<p><img alt="Broken image" src="https://github.com/M66B/FairEmail/blob/master/images/baseline_broken_image_black_48dp.png" width="48" height="48" /></p>
+<p><picture><source srcset="images/baseline_broken_image_white_48dp.png" media="(prefers-color-scheme: dark)"><img alt="Broken image" src="images/baseline_broken_image_black_48dp.png" width="48" height="48" /></picture></p>
 <p>Note that downloading external images from a remote server can be used to record you did see a message, which you likely don’t want if the message is spam or malicious.</p>
 <p><br /></p>
 <p><a name="faq28"></a> <strong>(28) How can I manage status bar notifications?</strong></p>
@@ -1312,9 +1334,9 @@ X-Google-Original-From: Somebody &lt;somebody+extra@example.org&gt;</code></pre>
 <p><a name="faq58"></a> <strong>(58) What does an open/closed email icon mean?</strong></p>
 <p>🌎 <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq58">Google Translate</a></p>
 <p>The email icon in the folder list can be open (outlined) or closed (solid):</p>
-<p><img src="https://github.com/M66B/FairEmail/blob/master/images/baseline_mail_outline_black_48dp.png" width="48" height="48" /></p>
+<p><img src="images/baseline_mail_outline_black_48dp.png" width="48" height="48" /></p>
 <p>Message bodies and attachments are not downloaded by default.</p>
-<p><img src="https://github.com/M66B/FairEmail/blob/master/images/baseline_email_black_48dp.png" width="48" height="48" /></p>
+<p><img src="images/baseline_email_black_48dp.png" width="48" height="48" /></p>
 <p>Message bodies and attachments are downloaded by default.</p>
 <p><br /></p>
 <p><a name="faq59"></a> <strong>(59) Can original messages be opened in the browser?</strong></p>
@@ -1681,7 +1703,7 @@ Target: Service</code></pre>
 <p>Please see <a href="https://en.wikipedia.org/wiki/Web_beacon">here</a> about what a tracking image exactly is. In short tracking images keep track if you opened a message.</p>
 <p>The BBC article ‘<a href="https://www.bbc.com/news/technology-56071437">Spy pixels in emails have become endemic</a>’ is worth reading.</p>
 <p>FairEmail will in most cases automatically recognize tracking images and replace them by this icon:</p>
-<p><img src="https://github.com/M66B/FairEmail/blob/master/images/baseline_my_location_black_48dp.png" width="48" height="48" /></p>
+<p><img src="images/baseline_my_location_black_48dp.png" width="48" height="48" /></p>
 <p>Automatic recognition of tracking images can be disabled in the privacy settings.</p>
 <p><br /></p>
 <p><a name="faq84"></a> <strong>(84) What are local contacts for?</strong></p>
@@ -1896,7 +1918,7 @@ category:promotions</code></pre>
 <p><del>Using <em>select account</em> to select and authorize Google accounts require special permission from Google for security and privacy reasons.</del> <del>This special permission can only be acquired for apps a developer manages and is responsible for.</del> <del>Third party builds, like the F-Droid builds, are managed by third parties and are the responsibility of these third parties.</del> <del>So, only these third parties can acquire the required permission from Google.</del> <del>Since these third parties do not actually support FairEmail, they are most likely not going to request the required permission.</del></p>
 <p><del>You can solve this in two ways:</del></p>
 <ul>
-<li><del>Switch to the official version of FairEmail, see <a href="https://github.com/M66B/FairEmail/blob/master/README.md#downloads">here</a> for the options</del></li>
+<li><del>Switch to the official version of FairEmail, see <a href="README.md#downloads">here</a> for the options</del></li>
 <li><del>Use app specific passwords, see <a href="#faq6">this FAQ</a></del></li>
 </ul>
 <p><del>Using <em>select account</em> in third party builds is not possible in recent versions anymore.</del> <del>In older versions this was possible, but it will now result in the error <em>UNREGISTERED_ON_API_CONSOLE</em>.</del></p>
@@ -1914,7 +1936,7 @@ category:promotions</code></pre>
 <p>OAuth for Outlook/Office 365, Yahoo, Mail.ru and Yandex is supported via the quick setup wizard.</p>
 <p>The OAuth <a href="https://oauth.faircode.eu/">jump page</a> exists for when <a href="https://developer.android.com/training/app-links/verify-site-associations">Android App Links</a> are not available, for example when using a non Play store version of the app, or do not work for some reason.</p>
 <p>OAuth is not supported for third party builds like the F-Droid build, please <a href="#faq147">see here</a> about why not.</p>
-<p>Since version 1.1859 there is support for custom OAuth. To use custom OAuth, an XML file containing the server and OAuth data, like the client secret, should be created and imported. Please <a href="https://github.com/M66B/FairEmail/blob/master/app/src/main/res/xml/providers.xml">see here</a> about how the XML file should look like. The XML file can be imported via a button in the debug panel of the miscellaneous settings of the app. To show the debug panel, debug mode mode should temporarily be enabled. After importing, you can use the quick setup wizard to configure an account.</p>
+<p>Since version 1.1859 there is support for custom OAuth. To use custom OAuth, an XML file containing the server and OAuth data, like the client secret, should be created and imported. Please <a href="app/src/main/res/xml/providers.xml">see here</a> about how the XML file should look like. The XML file can be imported via a button in the debug panel of the miscellaneous settings of the app. To show the debug panel, debug mode mode should temporarily be enabled. After importing, you can use the quick setup wizard to configure an account.</p>
 <p><br /></p>
 <p><a name="faq112"></a> <strong>(112) Which email provider do you recommend?</strong></p>
 <p>🌎 <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq112">Google Translate</a></p>
@@ -2220,7 +2242,7 @@ $NotDisplayed</code></pre>
 <p><a name="faq144"></a> <strong>(144) How can I record voice notes?</strong></p>
 <p>🌎 <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq144">Google Translate</a></p>
 <p>To record voice notes you can press this icon in the bottom action bar of the message composer:</p>
-<p><img src="https://github.com/M66B/FairEmail/blob/master/images/baseline_record_voice_over_black_48dp.png" width="48" height="48" /></p>
+<p><img src="images/baseline_record_voice_over_black_48dp.png" width="48" height="48" /></p>
 <p>This requires a compatible audio recorder app to be installed. In particular <a href="https://developer.android.com/reference/android/provider/MediaStore.Audio.Media.html#RECORD_SOUND_ACTION">this common intent</a> needs to be supported.</p>
 <p>For example <a href="https://f-droid.org/app/com.github.axet.audiorecorder">this audio recorder</a> is compatible.</p>
 <p>Voice notes will automatically be attached.</p>
@@ -2274,7 +2296,7 @@ $NotDisplayed</code></pre>
 <p>Note that you’ll need to uninstall the F-Droid build first before you can install a GitHub release because Android refuses to install (“<em>App was not installed</em>”) the same app with a different signature for security reasons.</p>
 <p>At the start of 2024, the Play Store app started to update all apps, including apps not installed via the Play Store. Since the F-Droid build is signed by the F-Droid organization, which basically means the F-Droid build is another app, updating the F-Droid build will fail. Unfortunately, there is no way to resolve this.</p>
 <p>Note that the GitHub version will automatically check for updates. When desired, this can be turned off in the miscellaneous settings.</p>
-<p>Please <a href="https://github.com/M66B/FairEmail/blob/master/README.md#downloads">see here</a> for all download option and <a href="#faq173">see here</a> for the differences between the different release types.</p>
+<p>Please <a href="README.md#downloads">see here</a> for all download option and <a href="#faq173">see here</a> for the differences between the different release types.</p>
 <p>If you have a problem with the F-Droid build, please check if there is a newer GitHub version first.</p>
 <p>You can see the source of the app in <em>About</em> of the navigation menu (left side menu), either <em>Play store</em>, <em>GitHub</em>, <em>F-Droid</em>, or <em>?</em> (for example in the case of a custom build).</p>
 <p><a href="https://apt.izzysoft.de/fdroid/">IzzyOnDroid</a> hosts the GitHub release of the app. <a href="https://f-droid.org/packages/com.aurora.store/">Aurora Store</a> hosts the Play store version of the app, even though the Aurora Store app was downloaded from F-Droid.</p>
@@ -2322,7 +2344,7 @@ $NotDisplayed</code></pre>
 <li>When I mark a message in IMAP as deleted: Auto-Expunge off - Wait for the client to update the server.</li>
 <li>When a message is marked as deleted and expunged from the last visible IMAP folder: Immediately delete the message forever</li>
 </ul>
-<p><img alt="External image" src="https://github.com/M66B/FairEmail/blob/master/images/Gmail_IMAP_delete_settings.png" width="600" height="333" /></p>
+<p><img alt="External image" src="images/Gmail_IMAP_delete_settings.png" width="600" height="333" /></p>
 <p>Note that archived messages can be deleted only by moving them to the trash folder first.</p>
 <p>Some background: Gmail seems to have an additional message view for IMAP, which can be different from the main message view.</p>
 <p>Another oddity is that a star (favorite message) set via the web interface cannot be removed with the IMAP command</p>
@@ -2426,7 +2448,7 @@ $NotDisplayed</code></pre>
 <p><br /></p>
 <p><a name="faq164"></a> <strong>(164) Can you add customizable themes?</strong></p>
 <p>🌎 <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fm66b.github.io%2FFairEmail%2F%23faq164">Google Translate</a></p>
-<p>Unfortunately, Android <a href="https://stackoverflow.com/a/26511725/1794097">does not support</a> dynamic themes, which means all themes need <a href="https://github.com/M66B/FairEmail/blob/master/app/src/main/res/values/styles.xml">to be predefined</a>.</p>
+<p>Unfortunately, Android <a href="https://stackoverflow.com/a/26511725/1794097">does not support</a> dynamic themes, which means all themes need <a href="app/src/main/res/values/styles.xml">to be predefined</a>.</p>
 <p>Since for each theme there needs to be a light, dark and black variant, it is not feasible to add for each color combination (literally millions) a predefined theme.</p>
 <p>Moreover, a theme is more than just a few colors. For example themes with a yellow accent color use a darker link color for enough contrast.</p>
 <p>Most people like the beige background for the light themes, but if you don’t like it, it can be disabled in the display settings.</p>
